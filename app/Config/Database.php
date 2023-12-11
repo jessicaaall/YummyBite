@@ -7,12 +7,13 @@ use CodeIgniter\Database\Config;
 /**
  * Database Configuration
  */
-class Database extends Config {
+class Database extends Config
+{
     /**
      * The directory that holds the Migrations
      * and Seeds directories.
      */
-    public string $filesPath = APPPATH.'Database'.DIRECTORY_SEPARATOR;
+    public string $filesPath = APPPATH . 'Database' . DIRECTORY_SEPARATOR;
 
     /**
      * Lets you choose which connection group to
@@ -26,9 +27,9 @@ class Database extends Config {
     public array $default = [
         'DSN' => '',
         'hostname' => 'sql12.freesqldatabase.com',
-        'username' => 'sql12668373',
-        'password' => 'ei9mnTTiv5',
-        'database' => 'sql12668373',
+        'username' => 'sql12668675',
+        'password' => 'QYrknNJYvE',
+        'database' => 'sql12668675',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
@@ -70,13 +71,14 @@ class Database extends Config {
         'busyTimeout' => 1000,
     ];
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
 
         // Ensure that we always set the database group to 'tests' if
         // we are currently running an automated test suite, so that
         // we don't overwrite live data on accident.
-        if(ENVIRONMENT === 'testing') {
+        if (ENVIRONMENT === 'testing') {
             $this->defaultGroup = 'tests';
         }
     }
