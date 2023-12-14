@@ -1,0 +1,281 @@
+INFO - 2023-12-12 06:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-12 07:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-12 07:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-12 08:38:14 --> Error connecting to the database: mysqli_sql_exception: Too many connections in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('sql12.freesqlda...', 'sql12668675', Object(SensitiveParameterValue), 'sql12668675', 3306, '', 0)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Too many connections in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#12 {main}
+CRITICAL - 2023-12-12 08:38:14 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Restoran`', [], false)
+ 3 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php')
+ERROR - 2023-12-12 08:38:17 --> Error connecting to the database: mysqli_sql_exception: Too many connections in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('sql12.freesqlda...', 'sql12668675', Object(SensitiveParameterValue), 'sql12668675', 3306, '', 0)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Too many connections in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#12 {main}
+CRITICAL - 2023-12-12 08:38:17 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Restoran`', [], false)
+ 3 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php')
+ERROR - 2023-12-12 08:38:18 --> Error connecting to the database: mysqli_sql_exception: Too many connections in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('sql12.freesqlda...', 'sql12668675', Object(SensitiveParameterValue), 'sql12668675', 3306, '', 0)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Too many connections in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#12 {main}
+CRITICAL - 2023-12-12 08:38:18 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Restoran`', [], false)
+ 3 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php')
+ERROR - 2023-12-12 08:38:20 --> Error connecting to the database: mysqli_sql_exception: Too many connections in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('sql12.freesqlda...', 'sql12668675', Object(SensitiveParameterValue), 'sql12668675', 3306, '', 0)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Too many connections in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#12 {main}
+CRITICAL - 2023-12-12 08:38:20 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Restoran`', [], false)
+ 3 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(634): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/Restoran.php(17): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/RestoranController.php(13): App\Models\Restoran->getDataRestoran()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php')
+CRITICAL - 2023-12-12 09:26:04 --> Undefined variable $data
+in APPPATH/Controllers/RestoranController.php on line 18.
+ 1 APPPATH/Controllers/RestoranController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php', 18)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RestoranController->index('null', 'null')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php')
+ERROR - 2023-12-12 09:26:18 --> mysqli_sql_exception: Unknown column 'Restoran.restoranId' in 'on clause' in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(15): App\Models\Restoran->getDataRestoran(NULL)
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#11 {main}
+CRITICAL - 2023-12-12 09:26:18 --> Unknown column 'Restoran.restoranId' in 'on clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Restoran`
+JOIN `Makanan` ON `Restoran`.`restoranId` = `Makanan`.`restoranId`', [], false)
+ 2 APPPATH/Models/Restoran.php(21): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/RestoranController.php(15): App\Models\Restoran->getDataRestoran(null)
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RestoranController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php')
+ERROR - 2023-12-12 09:39:48 --> mysqli_sql_exception: Unknown column 'totalKalori' in 'where clause' in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `Restora...', 0)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `Restora...')
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `Restora...')
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT `Restora...', Array, false)
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(14): App\Models\Restoran->getDataRestoran('Low')
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index('Low')
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#11 {main}
+CRITICAL - 2023-12-12 09:39:48 --> Unknown column 'totalKalori' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT `Restoran`.`id`, `Restoran`.`nama` as `namaRestoran`, `Restoran`.`lokasiX`, `Restoran`.`lokasiY`, (sum(Makanan.kalori) / count(Makanan.id)) as totalKalori
+FROM `Restoran`
+JOIN `Makanan` ON `Restoran`.`id` = `Makanan`.`restoranId`
+WHERE `totalKalori` < 500
+GROUP BY `Restoran`.`id`', [], false)
+ 2 APPPATH/Models/Restoran.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/RestoranController.php(14): App\Models\Restoran->getDataRestoran('Low')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RestoranController->index('Low')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php')
+ERROR - 2023-12-12 09:40:08 --> mysqli_sql_exception: Invalid use of group function in /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `Restora...', 0)
+#1 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `Restora...')
+#2 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `Restora...')
+#3 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT `Restora...', Array, false)
+#4 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Models/Restoran.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/app/Controllers/RestoranController.php(14): App\Models\Restoran->getDataRestoran('Low')
+#6 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(942): App\Controllers\RestoranController->index('Low')
+#7 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+#8 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /Users/filbertfelim/Filbert Felim/TST-SistemRestoran/system/Commands/Server/rewrite.php(47): require_once('/Users/filbertf...')
+#11 {main}
+CRITICAL - 2023-12-12 09:40:08 --> Invalid use of group function
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT `Restoran`.`id`, `Restoran`.`nama` as `namaRestoran`, `Restoran`.`lokasiX`, `Restoran`.`lokasiY`, (sum(Makanan.kalori) / count(Makanan.id)) as totalKalori
+FROM `Restoran`
+JOIN `Makanan` ON `Restoran`.`id` = `Makanan`.`restoranId`
+WHERE (sum(Makanan.kalori) / count(Makanan.id)) < 500
+GROUP BY `Restoran`.`id`', [], false)
+ 2 APPPATH/Models/Restoran.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/RestoranController.php(14): App\Models\Restoran->getDataRestoran('Low')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RestoranController->index('Low')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/filbertfelim/Filbert Felim/TST-SistemRestoran/public/index.php')
