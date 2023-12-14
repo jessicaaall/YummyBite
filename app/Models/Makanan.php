@@ -17,7 +17,7 @@ class Makanan extends Model
     {
         $db      = \Config\Database::connect();
         $builder = $db->table('Makanan');
-        $builder->select('Makanan.id, Makanan.nama as namaMakanan, Makanan.harga, Makanan.kalori ,Makanan.waktuProses');
+        $builder->select('Makanan.id, Makanan.nama as namaMakanan, Makanan.harga, Makanan.kalori ,Makanan.waktuProses, Makanan.restoranId');
         $builder->where('Makanan.restoranId', (int)$id);
         $query = $builder->get();
         return $query->getResult();
