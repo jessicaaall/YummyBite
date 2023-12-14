@@ -1944,9 +1944,14 @@ details.collapse summary::-webkit-details-marker {
   border-color: rgb(252 165 165 / var(--tw-border-opacity));
 }
 
-.bg-\[\#C51841\] {
+.bg-\[\#00278B\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(197 24 65 / var(--tw-bg-opacity));
+  background-color: rgb(0 39 139 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#BCD7FF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(188 215 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#EEF4FF\] {
@@ -1957,11 +1962,6 @@ details.collapse summary::-webkit-details-marker {
 .bg-\[\#F5F5F5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#FFCBCB\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 203 203 / var(--tw-bg-opacity));
 }
 
 .bg-primary {
@@ -1977,16 +1977,6 @@ details.collapse summary::-webkit-details-marker {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#00278B\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 39 139 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#BCD7FF\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(188 215 255 / var(--tw-bg-opacity));
 }
 
 .p-1 {
@@ -2089,19 +2079,9 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 
-.hover\:bg-\[\#FFCBCB\]:hover {
+.hover\:bg-\[\#9ec3fb\]:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 203 203 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-\[\#ffacac\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 172 172 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-red-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+  background-color: rgb(158 195 251 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-\[\#BCD7FF\]:hover {
@@ -2109,9 +2089,9 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(188 215 255 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-\[\#9ec3fb\]:hover {
+.hover\:bg-red-200:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(158 195 251 / var(--tw-bg-opacity));
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
 .focus\:ring-2:focus {

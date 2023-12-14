@@ -13,3 +13,5 @@ $routes->get('/makananAPI/(:any)', 'MakananController::index/$1');
 $routes->get('/login', 'AuthController::index');
 $routes->match(['get', 'post'], 'AuthController/loginAuth', 'AuthController::loginAuth');
 $routes->get('/logout', 'AuthController::logout');
+
+$routes->get('/transaction/?(:any)','TransactionController::index', ['filter' => 'authGuard']);
