@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-white">
     <div class="w-screen h-screen">
         <?php include 'navbar.php'; ?>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-8 mt-8">
@@ -27,46 +27,50 @@
             </div>
         </div>
         <div class="overflow-x-auto mt-8 mx-8">
-                <table class="table table-fixed">
-                    <!-- head -->
-                    <thead class="font-text text-black" style="font-size: 15px">
+            <table class="table table-fixed">
+                <!-- head -->
+                <thead class="font-text text-black" style="font-size: 15px">
+                    <tr>
+                        <th>#</th>
+                        <th>Order Date</th>
+                        <th>Order Status</th>
+                        <th>Total Price</th>
+                        <th>Order Details</th>
+                    </tr>
+                </thead>
+                <tbody class="text-black font-semibold">
+                    <?php foreach ($pemesanan as $index => $pemesananitem) : ?>
                         <tr>
-                            <th>#</th>
-                            <th>Order Date</th>
-                            <th>Order Status</th>
-                            <th>Total Price</th>
-                            <th>Order Details</th>
+                            <th><?= $index + 1; ?></th>
+                            <td class="formatOrderDate"></td>
+                            <td class="formatStatus"></td>
+                            <td class="formatTotalPrice"></td>
+                            <td>
+                                <button class="btn p-4 border-2 rounded-xl border-black bg-white text-white hover:text-white" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
+                                <dialog id="modal_orderDetails_<?= $pemesananitem['id']; ?>" class="modal modal-bottom sm:modal-middle text-black">
+                                    <div class="modal-box p-8 bg-white">
+                                        <h3 class="font-bold text-2xl mb-6">Order Details</h3>
+                                        <form method="dialog">
+                                            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                        </form>
+                                        <div id="modal_content_<?= $pemesananitem['id']; ?>"></div>
+                                    </div>
+                                </dialog>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($pemesanan as $index => $pemesananitem) : ?>
-                            <tr>
-                                <th><?= $index + 1; ?></th>
-                                <td class="formatOrderDate"></td>
-                                <td class="formatStatus"></td>
-                                <td class="formatTotalPrice"></td>
-                                <td>
-                                    <button class="btn" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
-                                    <dialog id="modal_orderDetails_<?= $pemesananitem['id']; ?>" class="modal modal-bottom sm:modal-middle">
-                                        <div class="modal-box p-8">
-                                            <h3 class="font-bold text-2xl mb-6">Order Details</h3>
-                                            <form method="dialog">
-                                                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                                            </form>
-                                            <div id="modal_content_<?= $pemesananitem['id']; ?>"></div>
-                                        </div>
-                                    </dialog>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
         function formatDate(dateString) {
-            const options = { day: 'numeric', month: 'short', year: 'numeric' };
+            const options = {
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+            };
             const formattedDate = new Date(dateString).toLocaleDateString('en-GB', options);
             return formattedDate;
         }
@@ -82,14 +86,14 @@
                 minimumFractionDigits: 0,
             }).format(value);
         }
-        
+
         function showDetails(orderId) {
             $.ajax({
                 type: 'GET',
                 url: 'http://localhost:8080/detailPemesananAPI/' + orderId,
                 dataType: 'json',
                 success: function(data) {
-                    
+
                     var modalContent = $('#modal_content_' + orderId);
                     modalContent.empty();
 
@@ -138,7 +142,6 @@
                 }
             });
         });
-
     </script>
 </body>
 
