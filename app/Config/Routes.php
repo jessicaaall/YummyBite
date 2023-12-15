@@ -18,3 +18,4 @@ $routes->get('/transaction','TransactionController::pemesanan', ['filter' => 'au
 $routes->get('/menulist','MenuListController::menu', ['filter' => 'authGuard']);
 $routes->get('/addmenu', 'MenuListController::addmenu', ['filter' => 'authGuard']);
 $routes->match(['get', 'post'], 'MenuListController/insertMenu', 'MenuListController::insertMenu', ['filter' => 'authGuard']);
+$routes->match(['get', 'post'], 'MenuListController/deleteMenu/(:any)', 'MenuListController::deleteMenu/$1', ['filter' => 'authGuard']);

@@ -49,4 +49,15 @@ class MenuListController extends BaseController
     {
         return view('addmenu');
     }
+
+    public function deleteMenu($seg1)
+    {        
+        $menuId = $seg1;
+                
+        $db = \Config\Database::connect();
+
+        $db->table('Makanan')->where('id', (int)$menuId)->delete();
+
+       return redirect()->to('/menulist');
+    }
 }
