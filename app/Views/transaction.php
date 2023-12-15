@@ -17,14 +17,19 @@
 <body>
     <div class="w-screen h-screen">
         <?php include 'navbar.php'; ?>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-8 mt-8 lg:mx-16">
-            <div class="col-span-2">
-                <p class="font-text text-lg md:text-3xl font-semibold text-black">Transaction History</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-8 mt-8">
+            <div class="col-span-1 mb-4">
+                <p class="font-text text-xl md:text-3xl font-bold text-black">Transaction History</p>
             </div>
-            <div class="overflow-x-auto mt-8">
-                <table class="table">
+            <div class="badge badge-outline rounded-2xl gap-16 p-6 font-text text-base font-semibold text-black lg:justify-self-end mr-4">
+                <div>Total Revenue</div>
+                <div id="totalRevenue"></div>
+            </div>
+        </div>
+        <div class="overflow-x-auto mt-8 mx-8">
+                <table class="table table-fixed">
                     <!-- head -->
-                    <thead class="font-text text-black" style="font-size: 16px">
+                    <thead class="font-text text-black" style="font-size: 15px">
                         <tr>
                             <th>#</th>
                             <th>Order Date</th>
@@ -33,67 +38,107 @@
                             <th>Order Details</th>
                         </tr>
                     </thead>
-                    <tbody id="pemesananTable">
+                    <tbody>
+                        <?php foreach ($pemesanan as $index => $pemesananitem) : ?>
+                            <tr>
+                                <th><?= $index + 1; ?></th>
+                                <td class="formatOrderDate"></td>
+                                <td class="formatStatus"></td>
+                                <td class="formatTotalPrice"></td>
+                                <td>
+                                    <button class="btn" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
+                                    <dialog id="modal_orderDetails_<?= $pemesananitem['id']; ?>" class="modal modal-bottom sm:modal-middle">
+                                        <div class="modal-box p-8">
+                                            <h3 class="font-bold text-2xl mb-6">Order Details</h3>
+                                            <form method="dialog">
+                                                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                            </form>
+                                            <div id="modal_content_<?= $pemesananitem['id']; ?>"></div>
+                                        </div>
+                                    </dialog>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
-        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
-        var restoranId = <?= json_encode($restoranId) ?>;
+        function formatDate(dateString) {
+            const options = { day: 'numeric', month: 'short', year: 'numeric' };
+            const formattedDate = new Date(dateString).toLocaleDateString('en-GB', options);
+            return formattedDate;
+        }
+
+        function getStatusColor(status) {
+            return status === 'Ongoing' ? '#810000' : (status === 'Complete' ? '#2C5F28' : '');
+        }
+
+        function formatCurrency(value) {
+            return new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0,
+            }).format(value);
+        }
+        
+        function showDetails(orderId) {
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:8080/detailPemesananAPI/' + orderId,
+                dataType: 'json',
+                success: function(data) {
+                    
+                    var modalContent = $('#modal_content_' + orderId);
+                    modalContent.empty();
+
+                    $.each(data, function(index, item) {
+                        modalContent.append('<p class="font-text font-semibold">' + item.namaMakanan + '</p>');
+                        modalContent.append('<p class="font-text">' + item.jumlah + ' x ' + formatCurrency(item.harga) + '</p>');
+                        modalContent.append('<p class="font-text font-medium mb-4">' + formatCurrency(item.hargaPesanan) + '</p>');
+                    });
+
+                    showModal('modal_orderDetails_' + orderId, orderId);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        function showModal(modalId, orderId) {
+            var modal = document.getElementById(modalId);
+            if (modal) {
+                modal.showModal();
+            }
+        }
+
+        var restoranId = <?= session()->get('restoranId') ?>;
         $(document).ready(function() {
             $.ajax({
                 type: 'GET',
                 url: 'http://localhost:8080/pemesananAPI/' + restoranId,
                 dataType: 'json',
                 success: function(data) {
-                    updatePemesananList(data);
+                    var totalRevenue = 0;
+
+                    $.each(data, function(index, item) {
+                        totalRevenue += parseInt(item.totalHarga, 10);
+                        $('.formatOrderDate').eq(index).append(formatDate(item.orderDate));
+                        $('.formatStatus').eq(index).text(item.status).css('color', getStatusColor(item.status));
+                        $('.formatTotalPrice').eq(index).append(formatCurrency(item.totalHarga));
+
+                    });
+
+                    $('#totalRevenue').text(formatCurrency(totalRevenue));
                 },
                 error: function(error) {
                     console.log(error);
                 }
             });
-
-            function updatePemesananList(data) {
-                var pemesananTable = $('#pemesananTable');
-                pemesananTable.empty();
-
-                $.each(data, function(index, item) {
-                    var row = $('<tr>');
-                    row.append('<th>' + (index + 1) + '</th>');
-                    row.append('<td>' + formatDate(item.orderDate) + '</td>');
-
-                    var status = $('<td>').text(item.status);
-                    if (item.status === 'Ongoing') {
-                        status.css('color', '#810000');
-                    } else if (item.status === 'Complete') {
-                        status.css('color', '#2C5F28');
-                    }
-                    row.append(status);
-
-                    row.append('<td>' + formatCurrency(item.totalHarga) + '</td>');
-                    row.append('<td><button onclick="viewOrderDetails(' + item.id + ')">View order details</button></td>');
-
-                    pemesananTable.append(row);
-                });
-            }
-
-            function formatDate(dateString) {
-                const options = { day: 'numeric', month: 'short', year: 'numeric' };
-                const formattedDate = new Date(dateString).toLocaleDateString('en-GB', options);
-                return formattedDate;
-            }
-
-            function formatCurrency(value) {
-                return new Intl.NumberFormat('id-ID', {
-                    style: 'currency',
-                    currency: 'IDR',
-                    minimumFractionDigits: 0,
-                }).format(value);
-            }
-
         });
+
     </script>
 </body>
 

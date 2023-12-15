@@ -6,10 +6,10 @@ use CodeIgniter\RESTful\ResourceController;
 
 class TransactionController extends ResourceController
 {
-    public function index($seg1 = null)
+    public function pemesanan()
     {
         $client = \Config\Services::curlrequest();
-        $apiURL = 'http://localhost:8080/pemesananAPI/"' . $seg1;
+        $apiURL = 'http://localhost:8080/pemesananAPI/' . session()->get('restoranId');
         $response = $client->request("get", $apiURL, [
             "headers" => [
                 "Accept" => "application/json"
@@ -18,8 +18,10 @@ class TransactionController extends ResourceController
         ]);
         if ($response->getStatusCode() == 200) {
             $data['pemesanan'] = json_decode($response->getBody(), true);
-            $data['restoranId'] = session()->get('id');
         }
+
+
         return view('transaction', $data);
     }
+
 }
