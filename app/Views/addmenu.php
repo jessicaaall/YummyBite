@@ -23,7 +23,7 @@
                 <form action="<?php echo base_url(); ?>/MenuListController/insertMenu" method="post" class="w-96 lg:w-4/12">
                     <div class="flex flex-col mb-7">
                         <label class="font-text font-medium mb-1 text-black">Name</label>
-                        <input type="text" name="namaMakanan" pattern="[a-zA-Z]+" required class="py-2 px-4 bg-[#F5F5F5] rounded-lg border-2 border-[#DDDDDD] text-black">
+                        <input type="text" name="namaMakanan" pattern="[a-zA-Z\s]+" required class="py-2 px-4 bg-[#F5F5F5] rounded-lg border-2 border-[#DDDDDD] text-black">
                     </div>
                     <div class="flex flex-col mb-7">
                         <label class="font-text font-medium mb-1 text-black">Calories</label>

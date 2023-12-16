@@ -33,7 +33,6 @@
                         <tr>
                             <th>#</th>
                             <th>Order Date</th>
-                            <th>Order Status</th>
                             <th>Total Price</th>
                             <th>Order Details</th>
                         </tr>
@@ -43,13 +42,13 @@
                             <tr>
                                 <th><?= $index + 1; ?></th>
                                 <td class="formatOrderDate"></td>
-                                <td class="formatStatus"></td>
                                 <td class="formatTotalPrice"></td>
                                 <td>
-                                    <button class="btn" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
+                                    <button class="btn my-2" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
                                     <dialog id="modal_orderDetails_<?= $pemesananitem['id']; ?>" class="modal modal-bottom sm:modal-middle">
-                                        <div class="modal-box p-8">
+                                        <div class="modal-box px-10 pt-10">
                                             <h3 class="font-bold text-2xl mb-6">Order Details</h3>
+                                            <div class="divider mb-6"></div>
                                             <form method="dialog">
                                                 <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                             </form>
@@ -71,10 +70,6 @@
             return formattedDate;
         }
 
-        function getStatusColor(status) {
-            return status === 'Ongoing' ? '#810000' : (status === 'Complete' ? '#2C5F28' : '');
-        }
-
         function formatCurrency(value) {
             return new Intl.NumberFormat('id-ID', {
                 style: 'currency',
@@ -94,9 +89,9 @@
                     modalContent.empty();
 
                     $.each(data, function(index, item) {
-                        modalContent.append('<p class="font-text font-semibold">' + item.namaMakanan + '</p>');
+                        modalContent.append('<p class="font-text font-lg font-semibold">' + item.namaMakanan + '</p>');
                         modalContent.append('<p class="font-text">' + item.jumlah + ' x ' + formatCurrency(item.harga) + '</p>');
-                        modalContent.append('<p class="font-text font-medium mb-4">' + formatCurrency(item.hargaPesanan) + '</p>');
+                        modalContent.append('<p class="font-text font-medium mb-6">' + formatCurrency(item.hargaPesanan) + '</p>');
                     });
 
                     showModal('modal_orderDetails_' + orderId, orderId);
@@ -126,7 +121,6 @@
                     $.each(data, function(index, item) {
                         totalRevenue += parseInt(item.totalHarga, 10);
                         $('.formatOrderDate').eq(index).append(formatDate(item.orderDate));
-                        $('.formatStatus').eq(index).text(item.status).css('color', getStatusColor(item.status));
                         $('.formatTotalPrice').eq(index).append(formatCurrency(item.totalHarga));
 
                     });
