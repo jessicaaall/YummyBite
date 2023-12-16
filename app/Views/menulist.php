@@ -22,7 +22,7 @@
             <button onclick="redirectToAddMenu()" class="btn btn-outline btn-block text-base rounded-3xl bg-gray-100 hover:bg-gray-300 hover:text-black">Add New Menu</button>
         </div>
         <div class="overflow-x-auto mt-8 mx-8">
-                <table class="table table-fixed">
+                <table class="table table-auto">
                     <!-- head -->
                     <thead class="font-text text-black" style="font-size: 15px">
                         <tr>
@@ -30,6 +30,7 @@
                             <th>Menu</th>
                             <th>Calories</th>
                             <th>Price</th>
+                            <th></th>
                             <th></th>
                         </tr>
                     </thead>
@@ -40,6 +41,9 @@
                                 <td><?= esc($menuitem->namaMakanan); ?></td>
                                 <td><?= esc($menuitem->kalori); ?></td>
                                 <td><?= 'Rp ' . number_format(esc($menuitem->harga), 0, ',', '.'); ?></td>
+                                <td>
+                                    <a href="<?= base_url('editmenu/' . esc($menuitem->id)); ?>" class="py-2 p-6 rounded-xl bg-[#EEF4FF] hover:bg-gray-200 hover:text-black">Edit</a>
+                                </td>
                                 <td>
                                     <button class="my-1" onclick="showConfirmationModal(<?= esc($menuitem->id); ?>)">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 448 512">
@@ -67,6 +71,10 @@
     <script>
         function redirectToAddMenu() {
             window.location.href = '<?= base_url('addmenu'); ?>';
+        }
+
+        function redirectToEditMenu() {
+            window.location.href = '<?= base_url('editmenu'); ?>';
         }
 
         function showConfirmationModal(id) {

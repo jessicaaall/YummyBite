@@ -1,4 +1,3 @@
-<!-- addmenu.php -->
 <!DOCTYPE html>
 <html>
 
@@ -38,7 +37,7 @@
                         <label class="font-text font-medium mb-1 text-black">Cooking Duration (minutes)</label>
                         <input type="text" name="waktuProses" pattern="[1-9]\d*" required class="py-2 px-4 bg-[#F5F5F5] rounded-lg border-2 border-[#DDDDDD] text-black">
                     </div>
-                    <button type="submit" class="text-xl font-bold bg-[#00278B] w-full mt-8 rounded-md text-[#FFFFFF] py-4 hover:bg-[#002360]">Save Menu</button>
+                    <button type="submit" class="text-xl font-bold bg-[#00278B] w-full mt-8 rounded-xl text-[#FFFFFF] py-4 hover:bg-[#002360]">Save New Menu</button>
                 </form>
             </div>
         </div>
