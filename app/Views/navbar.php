@@ -6,8 +6,8 @@
         </div>
         <?php if (session()->get('isLoggedIn')) : ?>
             <div class="flex flex-row space-x-2 md:space-x-8">
-                <button class="font-text font-semibold bg-[#EEF4FF] px-4 md:px-8 rounded-md text-sm md:text-lg text-black py-2 my-auto hover:bg-[#BCD7FF]">Home</button>
-                <button class="font-text font-semibold bg-[#EEF4FF] px-4 md:px-8 rounded-md text-sm md:text-lg text-black py-2 my-auto hover:bg-[#BCD7FF]">My Order</button>
+                <button onclick="redirectToMenuList()" class="font-text font-semibold bg-[#EEF4FF] px-4 md:px-8 rounded-md text-sm md:text-lg text-black py-2 my-auto hover:bg-[#BCD7FF]">Menu List</button>
+                <button onclick="redirectToTransaction()" class="font-text font-semibold bg-[#EEF4FF] px-4 md:px-8 rounded-md text-sm md:text-lg text-black py-2 my-auto hover:bg-[#BCD7FF]">Transaction History</button>
                 <div class="dropdown dropdown-end">
                     <button tabindex="0" class="m-1">
                         <svg class="my-auto w-6 h-6 md:w-12 md:h-12 text-black -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -27,4 +27,10 @@
     </div>
 </div>
 <script>
+    function redirectToMenuList() {
+        window.location.href = '<?= base_url('menulist'); ?>';
+    }
+    function redirectToTransaction() {
+        window.location.href = '<?= base_url('transaction'); ?>';
+    }
 </script>
