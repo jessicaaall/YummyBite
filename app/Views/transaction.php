@@ -73,10 +73,6 @@
             return formattedDate;
         }
 
-        function getStatusColor(status) {
-            return status === 'Ongoing' ? '#810000' : (status === 'Complete' ? '#2C5F28' : '');
-        }
-
         function formatCurrency(value) {
             return new Intl.NumberFormat('id-ID', {
                 style: 'currency',
@@ -96,9 +92,9 @@
                     modalContent.empty();
 
                     $.each(data, function(index, item) {
-                        modalContent.append('<p class="font-text font-semibold">' + item.namaMakanan + '</p>');
+                        modalContent.append('<p class="font-text font-lg font-semibold">' + item.namaMakanan + '</p>');
                         modalContent.append('<p class="font-text">' + item.jumlah + ' x ' + formatCurrency(item.harga) + '</p>');
-                        modalContent.append('<p class="font-text font-medium mb-4">' + formatCurrency(item.hargaPesanan) + '</p>');
+                        modalContent.append('<p class="font-text font-medium mb-6">' + formatCurrency(item.hargaPesanan) + '</p>');
                     });
 
                     showModal('modal_orderDetails_' + orderId, orderId);
@@ -128,7 +124,6 @@
                     $.each(data, function(index, item) {
                         totalRevenue += parseInt(item.totalHarga, 10);
                         $('.formatOrderDate').eq(index).append(formatDate(item.orderDate));
-                        $('.formatStatus').eq(index).text(item.status).css('color', getStatusColor(item.status));
                         $('.formatTotalPrice').eq(index).append(formatCurrency(item.totalHarga));
 
                     });

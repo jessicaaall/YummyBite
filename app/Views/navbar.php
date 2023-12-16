@@ -6,7 +6,7 @@
         </div>
         <?php if (session()->get('isLoggedIn')) : ?>
             <div class="flex flex-row space-x-2 md:space-x-8">
-                <button class="font-text font-semibold bg-[#EEF4FF] px-4 md:px-8 rounded-md text-sm md:text-lg text-black py-2 my-auto hover:bg-[#BCD7FF]">Menu List</button>
+                <button onclick="redirectToMenuList()" class="font-text font-semibold bg-[#EEF4FF] px-4 md:px-8 rounded-md text-sm md:text-lg text-black py-2 my-auto hover:bg-[#BCD7FF]">Menu List</button>
                 <button onclick="redirectToTransaction()" class="font-text font-semibold bg-[#EEF4FF] px-4 md:px-8 rounded-md text-sm md:text-lg text-black py-2 my-auto hover:bg-[#BCD7FF]">Transaction History</button>
                 <div class="dropdown dropdown-end">
                     <button tabindex="0" class="m-1">
@@ -27,6 +27,9 @@
     </div>
 </div>
 <script>
+    function redirectToMenuList() {
+        window.location.href = '<?= base_url('menulist'); ?>';
+    }
     function redirectToTransaction() {
         window.location.href = '<?= base_url('transaction'); ?>';
     }
