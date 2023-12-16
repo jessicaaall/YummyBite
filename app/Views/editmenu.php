@@ -23,7 +23,7 @@ $waktuProses = $makanan[0]->waktuProses;
 </head>
 
 <body>
-    <div class="w-screen h-screen">
+    <div class="w-screen h-screen bg-white">
         <?php include 'navbar.php'; ?>
         <div class="mx-8 mt-16">
             <h1 class="mb-14 font-text text-2xl md:text-3xl font-bold text-black text-center">Edit Menu</h1>

@@ -22,8 +22,8 @@
                 <p class="font-text text-xl md:text-3xl font-bold text-black">Transaction History</p>
             </div>
             <div class="badge badge-outline rounded-2xl gap-16 p-6 font-text text-base font-semibold text-black lg:justify-self-end mr-4">
-                <div>Total Revenue</div>
-                <div id="totalRevenue"></div>
+                <div class="text-black font-text font-bold">Total Revenue</div>
+                <div id="totalRevenue" class="text-black font-text font-bold"></div>
             </div>
         </div>
         <div class="overflow-x-auto mt-8 mx-8">
@@ -39,12 +39,12 @@
                 </thead>
                 <tbody class="text-black font-semibold">
                     <?php foreach ($pemesanan as $index => $pemesananitem) : ?>
-                        <tr>
+                        <tr class="text-black font-text font-bold">
                             <th><?= $index + 1; ?></th>
                             <td class="formatOrderDate"></td>
                             <td class="formatTotalPrice"></td>
                             <td>
-                                <button class="btn p-4 border-2 rounded-xl border-black bg-white text-white hover:text-white" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
+                                <button class="btn p-4 border-2 rounded-xl border-black bg-white text-black hover:bg-[#EEF4FF]" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
                                 <dialog id="modal_orderDetails_<?= $pemesananitem['id']; ?>" class="modal modal-bottom sm:modal-middle text-black">
                                     <div class="modal-box p-8 bg-white">
                                         <h3 class="font-bold text-2xl mb-6">Order Details</h3>
