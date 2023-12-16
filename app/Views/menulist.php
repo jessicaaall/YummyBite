@@ -36,7 +36,7 @@
                 </thead>
                 <tbody>
                     <?php foreach ($menu as $index => $menuitem) : ?>
-                        <tr class="text-black font-text font-bold">
+                        <tr class="text-black font-text font-medium">
                             <th><?= $index + 1; ?></th>
                             <td><?= esc($menuitem->namaMakanan); ?></td>
                             <td><?= esc($menuitem->kalori); ?></td>
