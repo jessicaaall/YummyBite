@@ -54,7 +54,7 @@
                                 </button>
                                 <dialog id="confirm_modal<?= esc($menuitem->id); ?>" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box p-10 bg-white">
-                                        <h3 class="font-bold text-2xl mb-6 text-center">Are you sure want to delete this menu?</h3>
+                                        <h3 class="font-bold text-2xl mb-6 text-center">Are you sure you want to delete this menu?</h3>
                                         <form method="dialog">
                                             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                         </form>
