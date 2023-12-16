@@ -33,7 +33,6 @@
                     <tr>
                         <th>#</th>
                         <th>Order Date</th>
-                        <th>Order Status</th>
                         <th>Total Price</th>
                         <th>Order Details</th>
                     </tr>
@@ -43,7 +42,6 @@
                         <tr>
                             <th><?= $index + 1; ?></th>
                             <td class="formatOrderDate"></td>
-                            <td class="formatStatus"></td>
                             <td class="formatTotalPrice"></td>
                             <td>
                                 <button class="btn p-4 border-2 rounded-xl border-black bg-white text-white hover:text-white" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
