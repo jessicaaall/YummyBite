@@ -30,6 +30,7 @@
                         <th>Menu</th>
                         <th>Calories</th>
                         <th>Price</th>
+                        <th>Cooking Duration</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -41,6 +42,7 @@
                             <td><?= esc($menuitem->namaMakanan); ?></td>
                             <td><?= esc($menuitem->kalori); ?></td>
                             <td><?= 'Rp ' . number_format(esc($menuitem->harga), 0, ',', '.'); ?></td>
+                            <td><?= esc($menuitem->waktuProses); ?> minutes</td>
                             <td>
                                 <a href="<?= base_url('editmenu/' . esc($menuitem->id)); ?>" class="py-2 p-6 rounded-xl bg-[#EEF4FF] hover:bg-gray-200 hover:text-black">Edit</a>
                             </td>
