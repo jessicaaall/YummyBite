@@ -14,6 +14,7 @@ $routes->match(['get', 'post'], 'AuthController/loginAuth', 'AuthController::log
 $routes->get('/logout', 'AuthController::logout', ['filter' => 'authGuard']);
 
 $routes->get('/', 'TransactionController::pemesanan', ['filter' => 'authGuard']);
+$routes->get('/transaction', 'TransactionController::pemesanan', ['filter' => 'authGuard']);
 $routes->get('/menulist', 'MenuListController::menu', ['filter' => 'authGuard']);
 $routes->get('/addmenu', 'MenuListController::addmenu', ['filter' => 'authGuard']);
 $routes->get('/editmenu/(:any)', 'MenuListController::editmenu/$1', ['filter' => 'authGuard']);
