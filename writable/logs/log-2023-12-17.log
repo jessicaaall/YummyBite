@@ -1,0 +1,314 @@
+INFO - 2023-12-17 06:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:31:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-17 06:31:23 --> 7 : Failed to connect to 0.0.0.1 port 80 after 0 ms: Couldn't connect to server
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('7', 'Failed to connect to 0.0.0.1 port 80 after 0 ms: Couldn\'t connect to server')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(387): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(145): CodeIgniter\HTTP\CURLRequest->send('get', 'http://1')
+ 4 APPPATH\Controllers\TransactionController.php(13): CodeIgniter\HTTP\CURLRequest->request('get', 'http://1', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\TransactionController->pemesanan()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+INFO - 2023-12-17 06:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-17 06:32:13 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(387): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(145): CodeIgniter\HTTP\CURLRequest->send('get', 'http://localhost:8080/pemesananAPI/1?username=customer1&password=password')
+ 4 APPPATH\Controllers\TransactionController.php(13): CodeIgniter\HTTP\CURLRequest->request('get', 'http://localhost:8080/pemesananAPI/1?username=customer1&password=password', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\TransactionController->pemesanan()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+INFO - 2023-12-17 06:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-17 06:32:36 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(387): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(145): CodeIgniter\HTTP\CURLRequest->send('get', 'http://localhost:8080/pemesananAPI/1')
+ 4 APPPATH\Controllers\TransactionController.php(13): CodeIgniter\HTTP\CURLRequest->request('get', 'http://localhost:8080/pemesananAPI/1', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\TransactionController->pemesanan()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+INFO - 2023-12-17 06:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-17 06:32:37 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(387): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(145): CodeIgniter\HTTP\CURLRequest->send('get', 'http://localhost:8080/pemesananAPI/1')
+ 4 APPPATH\Controllers\TransactionController.php(13): CodeIgniter\HTTP\CURLRequest->request('get', 'http://localhost:8080/pemesananAPI/1', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\TransactionController->pemesanan()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+INFO - 2023-12-17 06:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-17 06:33:46 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(387): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(145): CodeIgniter\HTTP\CURLRequest->send('get', 'http://localhost:8080/pemesananAPI/1?username=customer1&password=password')
+ 4 APPPATH\Controllers\TransactionController.php(13): CodeIgniter\HTTP\CURLRequest->request('get', 'http://localhost:8080/pemesananAPI/1?username=customer1&password=password', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\TransactionController->pemesanan()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+INFO - 2023-12-17 06:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-17 06:34:01 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(387): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(145): CodeIgniter\HTTP\CURLRequest->send('get', 'http://localhost:8080/pemesananAPI/1/?username=customer1&password=password')
+ 4 APPPATH\Controllers\TransactionController.php(13): CodeIgniter\HTTP\CURLRequest->request('get', 'http://localhost:8080/pemesananAPI/1/?username=customer1&password=password', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\TransactionController->pemesanan()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+INFO - 2023-12-17 06:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-17 06:34:29 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(387): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(145): CodeIgniter\HTTP\CURLRequest->send('get', 'http://localhost:8080/pemesananAPI/1?username=customer1&password=password')
+ 4 APPPATH\Controllers\TransactionController.php(13): CodeIgniter\HTTP\CURLRequest->request('get', 'http://localhost:8080/pemesananAPI/1?username=customer1&password=password', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\TransactionController->pemesanan()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+INFO - 2023-12-17 06:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-17 06:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-17 06:44:15 --> App\Models\PemilikRestoran::validatePassword(): Argument #1 ($username) must be of type string, null given, called in C:\Users\Administrator\Filbert Felim\TST-SistemRestoran\app\Controllers\RestoranController.php on line 18
+in APPPATH\Models\PemilikRestoran.php on line 24.
+ 1 APPPATH\Controllers\RestoranController.php(18): App\Models\PemilikRestoran->validatePassword(null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RestoranController->index('')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:44:38 --> App\Models\PemilikRestoran::validatePassword(): Argument #1 ($username) must be of type string, null given, called in C:\Users\Administrator\Filbert Felim\TST-SistemRestoran\app\Controllers\RestoranController.php on line 18
+in APPPATH\Models\PemilikRestoran.php on line 24.
+ 1 APPPATH\Controllers\RestoranController.php(18): App\Models\PemilikRestoran->validatePassword(null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RestoranController->index('')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:44:40 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('2')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:44:43 --> App\Models\PemilikRestoran::validatePassword(): Argument #1 ($username) must be of type string, null given, called in C:\Users\Administrator\Filbert Felim\TST-SistemRestoran\app\Controllers\RestoranController.php on line 18
+in APPPATH\Models\PemilikRestoran.php on line 24.
+ 1 APPPATH\Controllers\RestoranController.php(18): App\Models\PemilikRestoran->validatePassword(null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RestoranController->index('')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:44:57 --> App\Models\PemilikRestoran::validatePassword(): Argument #1 ($username) must be of type string, null given, called in C:\Users\Administrator\Filbert Felim\TST-SistemRestoran\app\Controllers\RestoranController.php on line 18
+in APPPATH\Models\PemilikRestoran.php on line 24.
+ 1 APPPATH\Controllers\RestoranController.php(18): App\Models\PemilikRestoran->validatePassword(null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RestoranController->index('')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:44:59 --> App\Models\PemilikRestoran::validatePassword(): Argument #1 ($username) must be of type string, null given, called in C:\Users\Administrator\Filbert Felim\TST-SistemRestoran\app\Controllers\RestoranController.php on line 18
+in APPPATH\Models\PemilikRestoran.php on line 24.
+ 1 APPPATH\Controllers\RestoranController.php(18): App\Models\PemilikRestoran->validatePassword(null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RestoranController->index('Low')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:01 --> App\Models\PemilikRestoran::validatePassword(): Argument #1 ($username) must be of type string, null given, called in C:\Users\Administrator\Filbert Felim\TST-SistemRestoran\app\Controllers\RestoranController.php on line 18
+in APPPATH\Models\PemilikRestoran.php on line 24.
+ 1 APPPATH\Controllers\RestoranController.php(18): App\Models\PemilikRestoran->validatePassword(null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RestoranController->index('Medium')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:02 --> App\Models\PemilikRestoran::validatePassword(): Argument #1 ($username) must be of type string, null given, called in C:\Users\Administrator\Filbert Felim\TST-SistemRestoran\app\Controllers\RestoranController.php on line 18
+in APPPATH\Models\PemilikRestoran.php on line 24.
+ 1 APPPATH\Controllers\RestoranController.php(18): App\Models\PemilikRestoran->validatePassword(null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RestoranController->index('Low')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:03 --> App\Models\PemilikRestoran::validatePassword(): Argument #1 ($username) must be of type string, null given, called in C:\Users\Administrator\Filbert Felim\TST-SistemRestoran\app\Controllers\RestoranController.php on line 18
+in APPPATH\Models\PemilikRestoran.php on line 24.
+ 1 APPPATH\Controllers\RestoranController.php(18): App\Models\PemilikRestoran->validatePassword(null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RestoranController->index('')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:05 --> App\Models\PemilikRestoran::validatePassword(): Argument #1 ($username) must be of type string, null given, called in C:\Users\Administrator\Filbert Felim\TST-SistemRestoran\app\Controllers\RestoranController.php on line 18
+in APPPATH\Models\PemilikRestoran.php on line 24.
+ 1 APPPATH\Controllers\RestoranController.php(18): App\Models\PemilikRestoran->validatePassword(null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RestoranController->index('')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RestoranController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:06 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:49 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:50 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:50 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:51 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:51 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:51 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:51 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:51 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:45:57 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:46:41 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:47:33 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:47:47 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('4')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:49:24 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('4')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')
+CRITICAL - 2023-12-17 06:49:47 --> Undefined variable $modelCustomer
+in APPPATH\Controllers\MakananController.php on line 17.
+ 1 APPPATH\Controllers\MakananController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelCustomer', 'C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\app\\Controllers\\MakananController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MakananController->index('2')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MakananController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Filbert Felim\\TST-SistemRestoran\\public\\index.php')

@@ -84,7 +84,7 @@
         function showDetails(orderId) {
             $.ajax({
                 type: 'GET',
-                url: 'http://localhost:8080/detailPemesananAPI/' + orderId,
+                url: 'http://localhost:8080/detailPemesananAPI/' + orderId + '?username=customer1&password=password',
                 dataType: 'json',
                 success: function(data) {
 
@@ -116,7 +116,7 @@
         $(document).ready(function() {
             $.ajax({
                 type: 'GET',
-                url: 'http://localhost:8080/pemesananAPI/' + restoranId,
+                url: 'http://localhost:8080/pemesananAPI/' + restoranId + '?username=customer1&password=password',
                 dataType: 'json',
                 success: function(data) {
                     var totalRevenue = 0;
