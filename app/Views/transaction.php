@@ -21,7 +21,7 @@
             <div class="col-span-1 mb-4">
                 <p class="font-text text-xl md:text-3xl font-bold text-black">Transaction History</p>
             </div>
-            <div class="badge badge-outline rounded-2xl gap-16 p-6 font-text text-base font-semibold text-black lg:justify-self-end mr-4">
+            <div class="badge badge-outline border-2 rounded-2xl gap-16 p-6 font-text text-base font-semibold text-black lg:justify-self-end mr-4">
                 <div class="text-black font-text font-bold">Total Revenue</div>
                 <div id="totalRevenue" class="text-black font-text font-bold"></div>
             </div>
@@ -39,15 +39,16 @@
                 </thead>
                 <tbody class="text-black font-semibold">
                     <?php foreach ($pemesanan as $index => $pemesananitem) : ?>
-                        <tr class="text-black font-text font-bold">
+                        <tr class="text-black font-text font-medium">
                             <th><?= $index + 1; ?></th>
                             <td class="formatOrderDate"></td>
                             <td class="formatTotalPrice"></td>
                             <td>
-                                <button class="btn p-4 border-2 rounded-xl border-black bg-white text-black hover:bg-[#EEF4FF]" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
+                                <button class="btn my-1 border-1 rounded-xl border-black bg-white text-black font-medium hover:bg-[#EEF4FF]" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
                                 <dialog id="modal_orderDetails_<?= $pemesananitem['id']; ?>" class="modal modal-bottom sm:modal-middle text-black">
-                                    <div class="modal-box p-8 bg-white">
+                                    <div class="modal-box px-10 pt-10">
                                         <h3 class="font-bold text-2xl mb-6">Order Details</h3>
+                                        <div class="divider mb-6"></div>
                                         <form method="dialog">
                                             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                         </form>
@@ -92,9 +93,9 @@
                     modalContent.empty();
 
                     $.each(data, function(index, item) {
-                        modalContent.append('<p class="font-text font-lg font-semibold">' + item.namaMakanan + '</p>');
-                        modalContent.append('<p class="font-text">' + item.jumlah + ' x ' + formatCurrency(item.harga) + '</p>');
-                        modalContent.append('<p class="font-text font-medium mb-6">' + formatCurrency(item.hargaPesanan) + '</p>');
+                        modalContent.append('<p class="font-text font-bold">' + item.namaMakanan + '</p>');
+                        modalContent.append('<p class="font-medium">' + item.jumlah + ' x ' + formatCurrency(item.harga) + '</p>');
+                        modalContent.append('<p class="font-text font-semibold mb-6">' + formatCurrency(item.hargaPesanan) + '</p>');
                     });
 
                     showModal('modal_orderDetails_' + orderId, orderId);

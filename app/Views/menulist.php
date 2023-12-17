@@ -30,17 +30,19 @@
                         <th>Menu</th>
                         <th>Calories</th>
                         <th>Price</th>
+                        <th>Cooking Duration</th>
                         <th></th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($menu as $index => $menuitem) : ?>
-                        <tr class="text-black font-text font-bold">
+                        <tr class="text-black font-text font-medium">
                             <th><?= $index + 1; ?></th>
                             <td><?= esc($menuitem->namaMakanan); ?></td>
                             <td><?= esc($menuitem->kalori); ?></td>
                             <td><?= 'Rp ' . number_format(esc($menuitem->harga), 0, ',', '.'); ?></td>
+                            <td><?= esc($menuitem->waktuProses); ?> minutes</td>
                             <td>
                                 <a href="<?= base_url('editmenu/' . esc($menuitem->id)); ?>" class="py-2 p-6 rounded-xl bg-[#EEF4FF] hover:bg-gray-200 hover:text-black">Edit</a>
                             </td>
@@ -52,7 +54,7 @@
                                 </button>
                                 <dialog id="confirm_modal<?= esc($menuitem->id); ?>" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box p-10 bg-white">
-                                        <h3 class="font-bold text-2xl mb-6 text-center">Are you sure want to delete this menu?</h3>
+                                        <h3 class="font-bold text-2xl mb-6 text-center">Are you sure you want to delete this menu?</h3>
                                         <form method="dialog">
                                             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                         </form>
