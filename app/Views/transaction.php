@@ -46,7 +46,7 @@
                             <td>
                                 <button class="btn my-1 border-1 rounded-xl border-black bg-white text-black font-medium hover:bg-[#EEF4FF]" onclick="showDetails(<?= $pemesananitem['id']; ?>)">View order details</button>
                                 <dialog id="modal_orderDetails_<?= $pemesananitem['id']; ?>" class="modal modal-bottom sm:modal-middle text-black">
-                                    <div class="modal-box px-10 pt-10">
+                                    <div class="modal-box px-10 pt-10 bg-white">
                                         <h3 class="font-bold text-2xl mb-6">Order Details</h3>
                                         <div class="divider mb-6"></div>
                                         <form method="dialog">
